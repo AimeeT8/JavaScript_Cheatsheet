@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+
+<html>
+
+<head></head>
+
+<body>
+
+
+<script type = "text/javascript" charset="utf-8">
+
+
+
+// Below shows the Document object by using document.write and the Math object:
+document.write(Math.ceil(4.9) + "<br/>");     // returns 5
+document.write(Math.ceil(4.7) + "<br/>");     // returns 5
+document.write(Math.floor(4.4) + "<br/>");     // returns 4
+document.write(Math.floor(4.2) + "<br/>");     // returns 4
+document.write(Math.ceil(-4.2) + "<br/>");     // returns -4
+
+const today = new Date();
+document.write(today + "<br />");  // returns current date and time 
+
+
+function seconds(x) {
+    if (isNaN(x)) {
+        return "Not a Number!!!";
+    }
+}
+document.write(seconds('188ABC'));   // returns "Not a Number!!!" because there are letters included.
+
+var saying = "I love to code!!";
+document.write("<br />" + saying.length);   //returns the length of the string which is 16 characters and includes spaces
+document.write("<br />" + saying.toUpperCase()); //returns the string in all uppercase letters.
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

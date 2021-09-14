@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+
+<html>
+
+<head></head>
+
+<body>
+
+
+<script type = "text/javascript" charset="utf-8">
+
+window.alert("Hello there!");  // this can also be written without the prefix as alert();
+
+
+if (confirm("Press a button!")) {          //confirm box gives you the option of an ok button or cancel button
+  document.write("You pressed OK!" + "<br />");
+} else {
+  document.write("You pressed Cancel!" + "<br />");
+}
+
+
+// the prompt box can also be written without the window prefix:
+let person = prompt("Please enter your name", "Harry Potter");
+let text;
+if (person == null || person == "") {
+  document.write("User cancelled the prompt.");
+} else {
+  document.write("Hello " + person + "! How are you today?");
+}
+
+
+
+
+
+
+</script>
+</body>
+</html>

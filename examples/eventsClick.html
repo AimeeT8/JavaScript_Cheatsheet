@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>  
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Hello World";   //This gets the id element "demo" which is a <p> and inserts the text "Hello World"
+}
+</script>
+</head>
+<body>
+
+<p>Click the button to trigger a function.</p>
+
+<button onclick="myFunction()">Click me</button>    <!--This is the event listener, it is listening for a click event and will run the above function-->
+
+<p id="demo"></p>
+
+</body>
+</html>

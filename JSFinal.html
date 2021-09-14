@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Final Assignment</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    
+
+</head>
+
+<body>
+
+    <h1>Javacsript Cheat Sheet</h1>
+
+    <h1>Javascript Fundamentals</h1>
+
+    <h2>Variables</h2>
+    <p>In Javascript there are three keywords used for variables. These are var, let and const. One great way to think
+        of a variable is to think of it as a binding. They grasp and hold onto the value. They are like a container.
+        <br />The keyword var was used in pre-2015 JavaScript and is short for variable. Const is short for constant
+        which means the value will never change as long as it lives.
+        <br />The keyword let is used if it is a variable(binding) that you need to mutate or reassign later on(not
+        within the same block).</p>
+
+
+    <p>var x = 5;
+        <br />var y = 6;
+        <br />var z = x + y;</p>
+
+
+    <p>{
+        <br />let x = "John Doe";
+        <br />let x = 0;
+        <br />}
+        <br />// SyntaxError: 'x' has already been declared</p>
+
+    <p>const PI = 3.141592653589793;
+        <br />PI = 3.14; // This will give an error
+        <br />PI = PI + 10; // This will also give an error</p>
+
+    <p>See a variable example <a href="examples/variables.html"> here</a></p>
+
+    <h2>Operators</h2>
+    <p>The assignment operator (=) assigns a value to a variable.
+        <br />The addition (+), multiplication (*), subtraction (-), and division (/) symbols are called arithmetic
+        operators.
+        <br />When the operators appear together without parentheses, the order is determined by precedence.
+        Multiplication and division come before addition and subtraction but when in doubt just add parentheses(which
+        have the highest precedence).
+        <br />The remainder (%) operator has the same precedence as multiplication and division. X % Y is the remainder
+        of dividing X by Y.
+        <br />The increment operator (++) adds by 1, and the decrement operator (--) subtracts by 1.
+        <br />Unary operators are words that produce a string value naming the type of value you give it.</p>
+
+    <p>let x = 5; // assign the value 5 to x
+        <br />let y = 2; // assign the value 2 to y
+        <br />let z = x + y; // assign the value 7 to z (5 + 2)
+    </p>
+
+    <p><strong>Assignment Operators</strong>
+        <br />= operator is the same as x = y 
+        <br />+= operator is the same as x = x + y 
+        <br />-= operator is the same as x = x - y 
+        <br />*= operator is the same as x = x * y 
+        <br />/= operator is the same as x = x / y 
+        <br />%= operator is the same as x = x % y 
+        <br />**= operator is the same as x = x ** y 
+    </p>
+
+    <p><strong>The + operator can also be used to add(concatenate) strings. </strong>
+            <br />let text1 = "John"; 
+            <br />let text2 = "Doe"; 
+            <br />let text3 = text1 + " " + text2;
+            <br />// result will be "John Doe"
+    </p>
+
+    <p><strong>The += assignment operator can also be used to add (concatenate) strings: </strong> 
+            <br />let text1 = "What a very "; 
+            <br />text1 += "nice day"; 
+            <br /> // result will be "What a very nice day"
+    </p>
+
+    <p><strong>Adding Strings and numbers: </strong>
+            <br />Adding two numbers, will return the sum, but adding a number and a string will return a string. 
+            <br />let x = 5 + 5; // result is 10 
+            <br />let y = "5" + 5; // result is 55 
+            <br />let z = "Hello" + 5; // result is Hello5
+
+    </p>
+
+
+
+    <p>See a few operators examples <a href="examples/operators.html">here</a></p>
+
+
+    <p>JavaSvript has 3 <strong>logical operators:</strong> And (&&), Or (||), and Not (!)
+        <br />These logical operators can be used to "reason" about Booleans. The and operator (&&) is a binary operator
+        which means it needs two values. It's result is true only if both values given are true.
+        <br />The or operator (||) is also a binary operator and produces true if either of the values given to it are
+        true.
+        <br />The not (!) operator is a unary operator that flips the value given. So !true produces false.
+        <br />With these, || has the lowest precedence, then &&, then the comparison operators, then the rest.</p>
+
+    <p>let x = 6;
+        <br />let y =3;
+        <br />(x < 10 && y> 1) is true
+            <br />(x == 5 || y == 5) is false
+            <br />!(x == y) is true</p>
+
+
+    <p><strong>Ternary operators</strong> require three values. It is written with a question mark and a colon. The value on the left of
+        the question mark picks which of the other two values will come out. When it's true it chooses the middle value,
+        and when it is false it chooses the value on the right.</p>
+
+
+    <p>let voteable = (age < 18) ? "Too young" :"Old enough";</p> <p>See logical operators example <a
+                href="examples/operators1.html">here</a>.</p>
+
+
+
+
+
+
+
+    <p><strong>Comparison Operators:</strong> Greater than(>), less than(<), equal to(==), equal value & equal type (===), not equal
+            to(!=), not equal value or type(!==), greater than or equal to(>=), less than or equal to(
+            <=). <br />In order to make a decision, your code checks the currect status of the script. This is commonly
+            done by comparing two values using a comparison operator which returns a value of true or false.</p>
+
+    <p>2 < 12 // true 
+        <br />5 > 1 // true
+        <br />7 == 9 // false
+        <br />if (age < 18) text="Too young to buy alcohol" ; </p> 
+        
+        <p>see comparison operators example <a href="examples/operators2.html">here</a>.</p>
+
+
+    <h2>Conditional Statements</h2>
+
+    <p>The if statement evaluates (or checks) a condition. If the condition evaluates to true, any statements in the
+        subsequent code blocks are executed.
+
+        <br />The if...else statement checks a condition. If it resolves to true the first code block is executed. If
+        the condition resolves to false the second code block is run instead.
+
+        <br />A switch statement starts with a variable called the switch value. Each case indicates a possible value
+        for this variable and the code that should run if the variable matches that value.
+        <br />At the end of each case is the break keyword. It tells Javascript that is has finished with the switch
+        statement and to proceed to run any subsequent code that appears after it.
+        <br />The default keyword specifies the code to run if there is no case match.</p>
+
+    <p>if (hour < 18) { <br /> greeting = "good day";
+        <br />} </p>
+
+    <p>if (hour < 18) { <br /> greeting = "Good day";
+        <br />} else {
+        <br />greeting = "Good evening";
+        <br />}</p>
+
+    <p>switch(expression) {
+        <br /> case x:
+        <br />// code block
+        <br />break;
+        <br />case y:
+        <br />// code block;
+        <br />break;
+        <br />default:
+        <br />// code block
+        <br />}</p>
+
+    <p>see examples <a href="examples/ifStatement.html">here </a>for if statement.
+        <br />see examples <a href="examples/ifElse.html">here </a> for if...else statement.
+        <br />see examples <a href="examples/switch.html">here </a> for switch statement.</p>
+
+
+
+
+
+
+    <h2>Loops</h2>
+
+
+    <p>Loops are handy, if you want to run the same code over and over again.
+        <br /><strong>The for loop</strong> - loops through a block of code a number of times. The parentheses after a for keyword must contain
+        two semicolons. The part before the first semicolon initializes the loop, the second part checks whether the
+        loop must continue, the final part updates the state of the loop after every iteration.</p>
+
+        <p>for (statement 1; statement 2; statement 3) {
+            <br />  // code block to be executed
+            <br />}
+        </p>
+
+        <p><strong>The do while loop</strong> - is a little different. The statements in the code block come before the condition. This
+        means that those statements are run once whether or not the condition is met.</p>
+
+        <p>do {
+            <br /> //code block to be executed
+            <br />}
+            <br />while (condition);
+        </p>
+
+  
+
+
+
+
+
+            <p>See for loop example <a href="examples/forLoop.html">here</a>.
+                <br />See do while loop example <a href="examples/doWhile.html">here </a>.</p>
+
+
+
+
+
+
+            <h2>Functions</h2>
+
+            <p>Functions let you group a series of statements together to perform a specific task. You can reuse a
+                function if parts of a script repeat the same task.
+                <br />A function can have parameters listed inside the parentheses after the function name. Inside the
+                function the arguments (parameters), behave as local variables.
+                <br />You always have to call a function to run it.</p>
+
+            <p>function name(parameter1, parameter2, parameter3) {
+                <br />// code to be executed
+                <br />}</p>
+
+
+            <p>See a function example <a href="examples/functions.html">here</a>.
+                <br />See a function with parameters example <a href="examples/functionParameter.html">here</a>.</p>
+
+
+
+
+            <h2>JS Objects General Overview</h2>
+
+            <p>Objects are like variables but they can contain many values.
+                <br />The values are written as <strong>name:value</strong> pairs, separated by a colon. These are called properties.
+                <br />Property bindings are similar to variable bindings. They grasp values.
+                <br />With objects you can change their properties, causing a single object value to have a different
+                content at different times.
+
+                <br />Objects can also have methods. Methods are actions that can be performed on objects.</p>
+
+
+            <p>Example: const phone = {type: "iPhone", model: "XR", color: "pink"}; //This example shows an object with properties
+                <br />Example of accessing an objects properties: objectName.propertyName or objectName["propertyName"]
+            </p>
+
+            <p>Method syntax: objectName.methodName();
+                <br />Example of method: phone.dialNumber();</p>
+
+            <p>In a function definition, this refers to the "owner" of the function. Using the above phone object
+                example, this.model, means the model property of the phone object.</p>
+
+            <P>See an Objects example <a href="examples/objects.html">here</a>.</P>
+
+
+
+
+
+
+
+            <h2>JS Built-in Objects</h2>
+
+            <p>The objects you create will usually be specifically written to suit <i>your</i> needs. They model the
+                data used within, or contain functionality needed by your script. Whereas, the built-in objects contain
+                functionality commonly needed by many scripts.
+                <br />As soon as a web page has loaded into the browser, these objects are available to use in your
+                scripts.</p>
+
+            <p><strong>Document Object</strong> - In the Document Object Model (DOM) the document object is the topmost
+                object, which represents the page as a whole.
+                <br />document.getElementById(id)  -   Find an element by element id.
+                <br />document.getElementByTagName(name)   -    Find elements by tag name.
+                <br />document.getElementsByClassName(name)   -    Find elements by class name.
+            </p>
+
+            <p><strong>Changing HTML elements</strong>
+                <br />element.innerHTML = new html content 
+                <br />element.attribute = new value (change the inner HTML of an element)
+                <br />element.style.property = new style (change the attribute value of an HTML element)
+                <br />element.setAttribute(attribute, value) (change the attribute value of an HTML element)
+            </p>
+
+            <p><strong>Adding and Deleting elements</strong>s
+                    <br />document.createElement(element)  // create an HTML element 
+                    <br />document.removeChile(element)  //remove an HTML element 
+                    <br />document.appendChild(element)  // add an HTML element 
+                    <br />document.replaceChild(new, old)  // replace an HTML element 
+                    <br />document.write(text)  // write into the HTML output stream
+            </p>
+
+            <p><strong>Math Object</strong> - For working with numbers and calculations. It has properties and methods
+                for mathematical constants and functions. Like other objects you just use the name of the Math object
+                followed by the property or method you want to access: Math.property.
+                <br />Math.ceil() // rounds number up to the nearest integer.
+                <br />Math.floor() // rounds number down to the nearest integer.
+                <br />Math.round() // returns x rounded to it's nearest integer 
+                <br />Math.trunc() // returns the integer part of x 
+            </p>
+
+            <p><strong>Date Object</strong> - In order to work with dates, you create an instance of the Date object.
+                You can then specify the time and date that you want it to represent.
+                <br />By default when you create a Date object it will hold today's date and the current time. If you
+                want it to store another date, you must explicitly specify the date and time you want it to hold.
+                <br />There are 4 ways to create a new Date Object:
+                <br />new Date()
+                <br />new Date(year, month, day, hours, minutes, seconds, milliseconds)
+                <br />new Date(milliseconds)
+                <br />new Date(date string)
+
+
+                <br />Example: var today = new Date(); // You have created a variable named today that holds a number(dates are stored as numbers).
+                <br />var dob = new Date(1996, 11, 26); // setting a date.
+                <br />Once you have created a Date object, you can use it's methods to set and retrieve the time and
+                date that it represents.
+                <br />getDate() // returns the day of the month.
+                <br />getHours() // returns the hour(0-23).</p>
+
+            <p><strong>Numbers Object</strong> - Whenever you have a value that is a number, you can use the methods and
+                properties of the Number object on it.
+                <br />These methods are helpful when dealing with a range of applications from financial calculations to
+                animations.
+                <br />isNaN() // checks if the value is not a number.
+                <br />toFixed() // rounds to specified number of decimal places(returns a string).
+                <br /> toPrecision() // rounds to total number of places(returns a string).</p>
+
+            <p><strong>String Objects</strong> - Whenever you have a value that is a string, you can use the properties
+                and methods of the String object on that value.
+                <br />The String properties and methods are often used to work with text stored in variables or objects. Here are a few examples:
+                <br />toUpperCase() // changes string to uppercase characters.
+                <br />charAt() // takes an index number as a parameter and returns the character found at that position.
+                <br />trim() //removes whitespace from the start and end of a string.</p>
+
+
+            <p>See a few built-in ojbect examples <a href="examples/builtinobjects.html">here</a>.</p>
+
+
+
+
+
+
+
+
+            <h2>Array Object</h2>
+            <p>Arrays let you store multiple values in a single variable. This is especially useful if you're working
+                with a list or a set of values that are related to each other. Array's are objects but in JavaScript it is best described as an array.
+                <br />They are also helpful when you don't know how many items a list will contain because when you
+                create an array, you don't have to specify how many values it will hold.
+                <br />When you create an array you give it a name(like any other variable) and the values are assigned
+                inside a pair of square brackets and each value is separated by a comma. The values don't have to be the
+                same data type.
+                <br />Array elements always start with 0. The first element is always at 0.
+                <br /> Syntax for creating an Array
+                <br/>const array_name = [item1, item2, ....];
+            </p>
+
+            <p>const cars = ["Saab", "Volvo", "BMW"];
+                <br />let x = cars[0];   // x = "Saab"
+            </p>
+            <p>You can also create an array, and then provide the elements:
+                <br />const cars = [];
+                <br />cars[0] = "Saab";
+                <br />cars[1] = "Volvo";
+                <br />cars[2] = "BMW";
+            </p>
+
+
+
+            <p>JavaScript variables can be objects. Arrays are special kinds of objects.
+                <br />  Because of this, you can have variables of different types in the same Array.
+                <br />  You can have objects in an Array. You can have functions in an Array. You can have arrays in an Array:
+                <br />myArray[0] = Date.now;
+                <br />myArray[1] = myFunction;
+                <br />myArray[2] = myCars;
+            </p>
+
+            <p>Array's have built-in properties and methods:
+                <br />cars.length   // Returns the number of elements
+                <br />cars.sort()   // Sorts the array
+            </p>
+
+            <p>Accessing the first element in an array:
+                <br />const fruits = ["Banana", "Orange", "Apple", "Mango"];
+                <br />fruits[0];    // Returns "Banana"
+            </p>
+
+            <p>Accessing the last element in an array:
+                <br />const fruits = ["Banana", "Orange", "Apple", "Mango"];
+                <br />fruits[fruits.length - 1];  // Returns "Mango"
+            </p>
+            
+            <p>Arrays have methods. Their property names are index numbers. You will often see arrays used to store complex data(including other objects).</p>
+
+            <p><strong>push()</strong> - Adds one more item to the end of an array and returns number of items in it.
+                <br /><strong>unshift()</strong>- Adds one more item to the start of an array and returns new length of it.
+                <br /><strong>pop()</strong> - Removes last element from array and returns the element.
+                <br /><strong>shift()</strong> - Removes first element from array and returns the element.
+                <br /><strong>forEach()</strong> - Executes a function once for each element in an array.
+                <br /><strong>some()</strong> - Checks if some elements in an array pass a test specified by a function.
+                <br /><strong>every()</strong> - Checks if all elements in array pass a test specified by a function.
+                <br /><strong>concat()</strong> - Creates new array containing this array and other arrays/values.
+                <br /><strong>filter()</strong> - Creates new array with elements that pass a test specified by a function.
+                <br /><strong>sort()</strong> - Reorders items in array using a function(called a compare function).
+                <br /><strong>reverse()</strong> - Reverses order of items in array.
+                <br /><strong>map()</strong> - Calls a function on each element in array and creates new array with results.
+            </p>
+            
+            
+            
+            
+            
+            
+                <p>See array examples <a href="examples/array.html">here</a>.</p>
+
+
+
+
+
+
+            <h2>String Object</h2>
+            <p>JavaScript strings are used for storing and manipulating text. A string is zero or more characters written inside quotes.
+                <br />Example:
+                <br />let text = "John Doe";
+                <br>You can use single or double quotes. You can use quotes inside a string, as long as they don't match the quotes surrounding the string:
+                <br />let answer2 = "He is called 'Johnny'";
+            </p>
+
+            <p>Strings also have methods:
+                <br /><strong>length</strong> - Returns number of characters in the string.
+                <br /><strong>toUpperCase()</strong> - Changes string to uppercase characters.
+                <br /><strong>toLowerCase()</strong> - Changes string to lowercase characters.
+                <br /><strong>charAt()</strong> - Takes an index number as a parameter, and returns the character found at that position.
+                <br /><strong>indexOf()</strong> - Returns index number of the first time a character or set of characters is found at that position.
+                <br /><strong>lastIndexOf()</strong> - Returns index number of the last time a character or set of characters is found within the string.
+                <br /><strong>substring()</strong> - Returns characters found between two index numbers where the character for the first index item number is included and the character for the last index number is not included.
+                <br /><strong>split()</strong> - When a character is specified, it splits the string each time it is found, then stores each individual part in an array.
+                <br /><strong>trim()</strong> - Removed whitespace from start and end of a string.
+                <br /><strong>replace()</strong> - Like find and replace, it takes one value that should be found, and another to replace it (by default, it only replaces the first match it finds).
+                <br /><strong>slice()</strong> - Extracts a part of a string and returns the extracted part in a new string. It takes 2 parameters - the start position, and the end position. if a parameter is negative, the position is counted from the end of the string. If you omit the second parameter, the method will slice out the rest of the string.
+                <br /><strong>substr()</strong> - Similar to slice() but the second parameter specifics the length of the extracted part.
+                <br /><strong>concat()</strong> - Joins two or more strings.
+                <br />
+            </p>
+
+            <p>Strings also have escape characters:
+                <br />\'         Gives the result ' (single quote)
+                <br />\"         Gives the result "  (double quote)
+                <br />\\         Gives the result \  (backslash)   
+                <br />\b         Gives a backspace
+                <br />\f         Gives a form feed
+                <br />\n         Gives a new line
+                <br />\r         Gives a carriage return
+                <br />\t         Gives a horizontal tabulator
+                <br />\v         Gives a vertical tabulator 
+            </p>
+
+            <p>Strings are normally primitive values in JavaScript, created from literals:
+                <br />let firstName = "John"; 
+                <br />But strings can also be defined as objects with the keyword new:
+                <br />let firstName = new String("John");
+            </p>
+
+
+
+
+            <p>See examples of strings <a href="examples/string.html">here</a>.</p>
+
+
+
+
+            <h1>Javascript - Web Browser - Web Document Interaction</h1>
+
+            <h2>Browser Objects</h2>
+            <p>The Browser Object Model allows Javascript to "talk to" the browser. It contains objects that represent the currect browser window or tab. It contains objects that model things like browser history and the device's screen.
+                <br />The topmost object is the window object, which represents the current browser window or tab. It's child objects represent other browser features:
+                <br /><strong>window</strong> - current browser window or tab. 
+                <br />Example: window.innerHeight  - the inner height of the browser window(in pixels).
+                
+                <br /><strong>document</strong> - current web page. 
+                <br />Example: document.getElementById("header");
+                <br /><strong>history</strong> - contains the browsers history.
+                <br />Example: history.back() - same as clicking back in the browser.
+                <br /><strong>location</strong> - URL or current page. 
+                <br />Example: window.location.href - returns the href(URL) of the current page.
+                <br /><strong>navigator</strong> - information about browser. 
+                <br />Example: navigator.cookieEnabled - returns true if cookies are enabled, otherwise false.
+                <br /><strong>screen</strong> - device's display information.
+                <br />Example: screen.width - returns the width of the visitor's screen in pixels.
+                <br /><strong>popup alert</strong> - JavaScript has three kinds of popup boxes: Alert box, Confirm box, and Prompt box.
+                <br />Example: window.alert("hello World!") - gives an alert on the screen. This method can also be written without the window prefix.
+                <br /><strong>timing</strong> - allows execution of code at specified time intervals.These time intervals are called timing events.
+                <br />Example: setTimeout(function, milliseconds) - executed a function, after waiting a specified number of milliseconds.
+                <br /><strong>setInterval(function, milliseconds)</strong> - same as setTimeout(), but repeats the execution of the function continuously.
+                <br /><strong>cookies</strong> - let you store user information in web pages.
+                <br />Example: document.cookie = "username = John Doe";
+            </p>
+
+            <p>Examples of brower objects <a href="examples/browserobjects.html">here</a>.</p>
+
+
+            <h2>HTML Objects</h2>
+
+            <p>JavaScript can access and manipulate HTML objects.</p>
+
+            <p><strong>Anchor Object</strong>
+                <br />Find the value of the href attribute of a link. 
+                <br />FInd the value of the href lang attribute of a link. 
+                <br />Find the value of the id attribute of a link. 
+                <br />Find the value of the rel attribute of a link. 
+                <br />Find the value of the target attribute of a link. 
+                <br />Find the value of the type attribute of a link. 
+                <br />See an example of anchor object <a href="examples/htmlAnchor.html">here</a>.
+            </p>
+
+            <p><strong>Area Object</strong>
+                    <br />Find the alternate text of an image-map area 
+                    <br />Find the coordinates of an area. 
+                    <br />Find the shape of an area. 
+                    <br />Find the href of an area. 
+                    <br />Find the protocol part of the href attribute of an area. 
+                    <br />Find the hostname part of the href attribute of an area. 
+                    <br />Find the port number part of the href attribute of an area. 
+                    <br />Find the pathname part of the href attribute of an area. 
+                    <br />Find the query string part of the href attribute of an area. 
+                    <br />Find the hash part of the href attribute of an area. 
+                    <br />Find the value of the target attribute of an area. 
+                    <br />See an example of an area object <a href="examples/HTMLarea.html">here</a>.
+            </p>
+
+            <p><strong>Base Object</strong>
+                    <br />Find the base URL for all relative URLs on a page. 
+                    <br />Find the base target for all links on a page. 
+                    <br />See an example of a base object <a href="examples/HTMLbase.html">here</a>.
+            </p>
+
+            <p>i<strong>Frame Object</strong>
+                    <br />Change the background color of an iframe. 
+                    <br />Find the height of an iframe. 
+                    <br />Find the value of the name attribute of an iframe. 
+                    <br />Find the source (src) attribute of an iframe. 
+                    <br />Change the source (src) attribute of an iframe. 
+                    <br />See an example of an IFrame object <a href="examples/HTMLIFrame.html">here</a>.
+            </p>
+
+            <p><strong>Image Object</strong>
+                    <br />Find the alternate text of an image .
+                    <br />Find the height of an image.
+                    <br />Click to display a high-resolution version of an image. 
+                    <br />Find the source (src) of an image. 
+                    <br />Change the source of an image. 
+                    <br />Change the source of the lightbulb. 
+                    <br />Find the value of the usemap attribute of an image. 
+                    <br />See an example of an image object <a href="examples/HTMLimage.html">here</a>.
+            </p>
+
+            <p><strong>Table Object</strong>
+                    <br />CHange the width of a table border. 
+                    <br />Change the padding of a table. 
+                    <br />Find the innerHTML of a cell. 
+                    <br />Create a caption for a table. 
+                    <br />Delete rows in a table. 
+                    <br />Add rows to a table. 
+                    <br />Change the content of a table cell. 
+                    <br />See an example of a table object <a href="examples/HTMLtable.html">here</a>.
+            </p>
+
+            <h2>Events</h2>
+
+            <p>JavaScript lets you execute code when events are detected:
+                <br />element event='some JavaScript'
+            </p>
+
+            <p><strong>Input Events</strong>
+                <br />onblur - When a user leaves an input field.
+                <br />onchange - When a user changes the content of an input field
+                <br />onchange - When a user selects a dropdown value.
+                <br />onfocus - When an input field fers focus.
+                <br />onselect - When input text is selected.
+                <br />onsubmit - When a user clicks the submit button. 
+                <br />onreset - When a user clicks the reset button. 
+                <br />onkeydown - When a user is pressing/holding down a key. 
+                <br />onkeypress - When a user is pressing/holding down a key. 
+                <br />onkeyup - When the user releases a key. 
+                <br />onkeyup - When the user releases a key. 
+                <br />onekeydown vs onkeyup - Both.
+
+                <br />See an example of an input event <a href="examples/eventsInput.html">here</a>.
+            </p>
+
+            <p><strong>Mouse Events</strong>
+                <br />onmouseover/onmouseout - When the mouse passes over an element.
+                <br />onmousedown/onmouseup - WHen pressing/releasing a mouse button. 
+                <br />onmousedown - When mouse is clicked: alert which element. 
+                <br />onmousedown - When mouse is clicked: alert which button. 
+                <br />onmousemove/onmouseout - When moving the mouse pointer over/out of an image. 
+                <br />onmouseover/onmouseout - When moving the mouse over/out of an image. 
+                <br />onmouseover an image map 
+
+                <br />See an example of an input event <a href="examples/eventsMouse.html">here</a>.
+            </p>
+
+
+            <p><strong>Click Events</strong>
+                <br />Acting to the onclick event. 
+                <br />onclick - When button is clicked. 
+                <br />ondblclick - When a text is double-clicked. 
+            
+                <br />See an example of an input event <a href="examples/eventsClick.html">here</a>.
+            </p>
+
+            <p><strong>Load Events</strong>
+                <br />onload - When the page has been loaded. 
+                <br />onload - When an image has been loaded. 
+                <br />onerror - When an error occurs when loading an image. 
+                <br />onunload - When the browser closes the document. 
+                <br />onresize - When the browser window is resized. 
+
+                <br />See an example of an input event <a href="examples/eventsLoad.html">here</a>.
+            </p>
+
+            <p><strong>Other Events</strong>
+                <br />What is the keycode of the the key pressed? 
+                <br />What are the coordinates of the cursor? 
+                <br />What are the coordinates of the cursor, relative to the screen? 
+                <br />Was the shift key pressed? 
+                <br />Which even type occured? 
+
+                <br />See an example of an input event <a href="examples/eventsOther.html">here</a>.
+            </p>
+
+
+
+
+
+            <script type="text/javascript" charset="utf-8">
+            $(document).ready(function() {
+                
+              
+                $("h2").hover(function () {
+                    $(this).css("text-decoration", "underline");
+              
+                });
+
+                $("h1").hover(function() {
+                    $(this).css("color", "green");
+              
+                });
+
+            });
+            
+
+            </script>
+
+
+
+
+</body>
+
+</html>

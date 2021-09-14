@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function whichButton(event) {
+  document.getElementById("demo").innerHTML = event.keyCode;  //get the <p> element with id "demo" and put the keycode of the key pressed into the <p> element.
+}
+</script>
+</head>
+
+<body onkeyup="whichButton(event)">    <!--When there is a keyup event the function is run -->
+
+<p><b>Note:</b> Make sure the right frame has focus when trying this example!</p>
+
+<p>Click on this page, and press a key on your keyboard.</p>
+
+<p id="demo"></p>
+
+</body>
+</html>
